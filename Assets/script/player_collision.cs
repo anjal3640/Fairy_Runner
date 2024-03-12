@@ -76,26 +76,26 @@ public class player_collision : MonoBehaviour
             }
 
         }
+        else if ((other.gameObject.CompareTag("obstacle") || other.gameObject.CompareTag("obstacle3"))&& !shieldOn)
+        {
+            //Debug.Log("shiled OFF");
+            // Debug.Log("OBSTACLEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+                speed = 0;
+                endgame = true;
+                sadsound.Play();
+            BGsound.Pause();
+            player_script.reverseOn = false;
+            timerScript.timeLeft = 0;
+        }
         else if (other.gameObject.CompareTag("Shield"))
         {
             //Debug.Log("shild taken");
             StartCoroutine(ShieldActivated());
+            Destroy(other.gameObject);
         }
-        else if (!shieldOn)
-        {
-            //Debug.Log("shiled OFF");
-            if (other.gameObject.CompareTag("obstacle") || other.gameObject.CompareTag("obstacle3"))
-            {
-               // Debug.Log("OBSTACLEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
-                speed = 0;
-                endgame = true;
-                sadsound.Play();
-                BGsound.Pause();
-            }
-        }
-        
-        
-        
+
+
+
 
     }
 
