@@ -1,0 +1,22 @@
+{
+    "name": "New Controls",
+    "maps": [
+        {
+            "name": "player",
+            "id": "a5331719-ec1c-47b1-bde4-cf0842df7658",
+            "actions": [
+                {
+                    "name": "movement",
+                    "type": "Value",
+                    "id": "74f47e1f-f7c2-4ea9-94b4-0e8c17bc2c4c",
+                    "expectedControlType": "Double",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}
