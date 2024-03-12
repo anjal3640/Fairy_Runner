@@ -12,6 +12,7 @@ public class player_collision : MonoBehaviour
     [SerializeField] GameObject canvas1;
     [SerializeField] GameObject canvasEndGame;
     [SerializeField] TMP_Text finalPoints;
+    [SerializeField] GameObject heal;
     
     public static int points = 0;
     public static bool shieldOn = false;
@@ -37,11 +38,13 @@ public class player_collision : MonoBehaviour
     {
         // shield ON
         shieldOn = true;
+        heal.SetActive(true);
 
         // Wait 
         yield return new WaitForSeconds(10f);
 
         shieldOn = false;
+        heal.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -83,7 +86,7 @@ public class player_collision : MonoBehaviour
             //Debug.Log("shiled OFF");
             if (other.gameObject.CompareTag("obstacle") || other.gameObject.CompareTag("obstacle3"))
             {
-                Debug.Log("OBSTACLEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+               // Debug.Log("OBSTACLEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
                 speed = 0;
                 endgame = true;
                 sadsound.Play();

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6EF0DFD4-0F7B-B24D-0B3D-D85B2B3D0B2C}</ProjectGuid>
+    <ProjectGuid>{6D1DEA0C-9E23-4746-802A-6B803F856426}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Postprocessing.Runtime</AssemblyName>

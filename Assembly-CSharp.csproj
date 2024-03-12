@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{752AA249-0E88-B950-33CA-49E413BCC5F1}</ProjectGuid>
+    <ProjectGuid>{0D406EB7-1B44-96F4-60CA-30A71FBB0248}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,15 +62,13 @@
   <ItemGroup>
     <Compile Include="Assets\script\timerScript.cs" />
     <Compile Include="Assets\script\player_animator.cs" />
-    <Compile Include="Assets\Particle System Color Changer\Scripts\PS_ColorChangerEditor.cs" />
     <Compile Include="Assets\script\move_ground.cs" />
     <Compile Include="Assets\script\player_collision.cs" />
     <Compile Include="Assets\script\camaramovement.cs" />
-    <Compile Include="Assets\Particle System Color Changer\Example\Scripts\PS_ExampleRandomColorChange.cs" />
     <Compile Include="Assets\script\player_script.cs" />
     <Compile Include="Assets\script\destroy_obstacle.cs" />
-    <Compile Include="Assets\Particle System Color Changer\Scripts\PS_ColorChanger.cs" />
     <Compile Include="Assets\script\movecoin.cs" />
+    <Compile Include="Assets\particle\Travis Game Assets\Status Effects\Demo Scene\Scripts\StatusEffectsPreview.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\props\SineVFX\PostProcessingV2\Shaders\StdLib.hlsl" />
@@ -111,6 +109,7 @@
     <None Include="Assets\props\SineVFX\PostProcessingV2\Shaders\Builtins\ScalableAO.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\props\laxer Assets\creek\Shaders\RunningWaterSimple.shader" />
+    <None Include="Assets\particle\Travis Game Assets\Status Effects\Readme.txt" />
     <None Include="Assets\props\SineVFX\PostProcessingV2\Shaders\Builtins\MultiScaleVO.shader" />
     <None Include="Assets\props\SineVFX\PostProcessingV2\Shaders\Debug\Vectorscope.shader" />
     <None Include="Assets\props\SineVFX\PostProcessingV2\Shaders\API\D3D9.hlsl" />
@@ -1100,11 +1099,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{6EF0DFD4-0F7B-B24D-0B3D-D85B2B3D0B2C}</Project>
+      <Project>{6D1DEA0C-9E23-4746-802A-6B803F856426}</Project>
       <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{C8BCA630-88C9-80E0-8C89-A54603C6C33A}</Project>
+      <Project>{665A4C86-0098-D0B7-336B-6E2806832C0C}</Project>
       <Name>Unity.Postprocessing.Editor</Name>
     </ProjectReference>
   </ItemGroup>
