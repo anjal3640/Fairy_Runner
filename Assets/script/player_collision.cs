@@ -13,10 +13,13 @@ public class player_collision : MonoBehaviour
     [SerializeField] GameObject canvasEndGame;
     [SerializeField] TMP_Text finalPoints;
     [SerializeField] GameObject heal;
-    
+    [SerializeField] TMP_Text High_Score;
+
+
     public static int points = 0;
     public static bool shieldOn = false;
     public static float speed = -6f;
+    public static int highscorecount;
     
     private int updatespeed = 0;
     [SerializeField] private TMP_Text points_text;
@@ -24,7 +27,16 @@ public class player_collision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Check if the "HighScore" key exists in PlayerPrefs
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highscorecount = PlayerPrefs.GetInt("HighScore");
+        }
+        else
+        {
+            highscorecount = 0;
+            PlayerPrefs.SetInt("HighScore", highscorecount);
+        }
     }
     public void gameRestart()
     {
@@ -54,6 +66,7 @@ public class player_collision : MonoBehaviour
         
          if (other.gameObject.CompareTag("gem"))
         {
+
             points = points + 5;
             Destroy(other.gameObject);
             coinsound.Play();
@@ -89,7 +102,7 @@ public class player_collision : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Shield"))
         {
-            //Debug.Log("shild taken");
+            Debug.Log("shild taken");
             StartCoroutine(ShieldActivated());
             Destroy(other.gameObject);
         }
@@ -107,6 +120,12 @@ public class player_collision : MonoBehaviour
         {
             canvas1.gameObject.SetActive(false);
             finalPoints.text = "Points: " + points;
+            if(points>highscorecount)
+            {
+                highscorecount = points;
+                PlayerPrefs.SetInt("HighScore",highscorecount);
+            }
+            High_Score.text ="High Score: "+highscorecount;
             canvasEndGame.gameObject.SetActive(true);
             endgame = false;
         }
